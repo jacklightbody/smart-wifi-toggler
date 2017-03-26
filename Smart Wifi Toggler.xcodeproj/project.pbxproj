@@ -12,6 +12,7 @@
 		045629C21E883E8C00BAF949 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045629C01E883E8C00BAF949 /* Main.storyboard */; };
 		045629C41E883E8C00BAF949 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 045629C31E883E8C00BAF949 /* Assets.xcassets */; };
 		045629C71E883E8C00BAF949 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045629C51E883E8C00BAF949 /* LaunchScreen.storyboard */; };
+		04CED4BE1E8845CE00FE5F1F /* PermissionScope.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04CED4BD1E8845CE00FE5F1F /* PermissionScope.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		045629C31E883E8C00BAF949 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		045629C61E883E8C00BAF949 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		045629C81E883E8C00BAF949 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04CED4BD1E8845CE00FE5F1F /* PermissionScope.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PermissionScope.framework; path = Carthage/Build/iOS/PermissionScope.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04CED4BE1E8845CE00FE5F1F /* PermissionScope.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +43,7 @@
 			children = (
 				045629BB1E883E8C00BAF949 /* Smart Wifi Toggler */,
 				045629BA1E883E8C00BAF949 /* Products */,
+				04CED4BC1E8845CE00FE5F1F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +68,14 @@
 			path = "Smart Wifi Toggler";
 			sourceTree = "<group>";
 		};
+		04CED4BC1E8845CE00FE5F1F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				04CED4BD1E8845CE00FE5F1F /* PermissionScope.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,6 +86,7 @@
 				045629B51E883E8B00BAF949 /* Sources */,
 				045629B61E883E8B00BAF949 /* Frameworks */,
 				045629B71E883E8B00BAF949 /* Resources */,
+				04CED4C01E8845ED00FE5F1F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -96,6 +109,7 @@
 				TargetAttributes = {
 					045629B81E883E8B00BAF949 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 73WHT8U62X;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -130,6 +144,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04CED4C01E8845ED00FE5F1F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/PermissionScope.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		045629B51E883E8B00BAF949 /* Sources */ = {
@@ -260,6 +291,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 73WHT8U62X;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Smart Wifi Toggler/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jacklightbody.Smart-Wifi-Toggler";
@@ -272,6 +308,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 73WHT8U62X;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Smart Wifi Toggler/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jacklightbody.Smart-Wifi-Toggler";
@@ -299,6 +340,7 @@
 				045629CD1E883E8C00BAF949 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
