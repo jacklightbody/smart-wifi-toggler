@@ -13,6 +13,8 @@
 		045629C41E883E8C00BAF949 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 045629C31E883E8C00BAF949 /* Assets.xcassets */; };
 		045629C71E883E8C00BAF949 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045629C51E883E8C00BAF949 /* LaunchScreen.storyboard */; };
 		04CED4BE1E8845CE00FE5F1F /* PermissionScope.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04CED4BD1E8845CE00FE5F1F /* PermissionScope.framework */; };
+		04CED4C41E8846EB00FE5F1F /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CED4C31E8846EB00FE5F1F /* Location.swift */; };
+		04CED4C61E8848E000FE5F1F /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CED4C51E8848E000FE5F1F /* Reachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		045629C61E883E8C00BAF949 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		045629C81E883E8C00BAF949 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04CED4BD1E8845CE00FE5F1F /* PermissionScope.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PermissionScope.framework; path = Carthage/Build/iOS/PermissionScope.framework; sourceTree = "<group>"; };
+		04CED4C31E8846EB00FE5F1F /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		04CED4C51E8848E000FE5F1F /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,8 +63,10 @@
 			isa = PBXGroup;
 			children = (
 				045629BC1E883E8C00BAF949 /* AppDelegate.swift */,
+				04CED4C31E8846EB00FE5F1F /* Location.swift */,
 				045629BE1E883E8C00BAF949 /* ViewController.swift */,
 				045629C01E883E8C00BAF949 /* Main.storyboard */,
+				04CED4C71E8848FF00FE5F1F /* 3rd Party */,
 				045629C31E883E8C00BAF949 /* Assets.xcassets */,
 				045629C51E883E8C00BAF949 /* LaunchScreen.storyboard */,
 				045629C81E883E8C00BAF949 /* Info.plist */,
@@ -74,6 +80,14 @@
 				04CED4BD1E8845CE00FE5F1F /* PermissionScope.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		04CED4C71E8848FF00FE5F1F /* 3rd Party */ = {
+			isa = PBXGroup;
+			children = (
+				04CED4C51E8848E000FE5F1F /* Reachability.swift */,
+			);
+			name = "3rd Party";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +182,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				045629BF1E883E8C00BAF949 /* ViewController.swift in Sources */,
+				04CED4C41E8846EB00FE5F1F /* Location.swift in Sources */,
+				04CED4C61E8848E000FE5F1F /* Reachability.swift in Sources */,
 				045629BD1E883E8C00BAF949 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
