@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Data Blocker.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>Smart Wifi Toggler.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -13,6 +18,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>045629B81E883E8B00BAF949</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>048EA3181E8C2F500004DC97</key>
 		<dict>
 			<key>primary</key>
 			<true/>

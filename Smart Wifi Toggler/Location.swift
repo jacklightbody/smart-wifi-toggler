@@ -10,6 +10,7 @@ import Foundation
 import CoreLocation
 import UIKit
 import UserNotifications
+import SafariServices
 class Location: NSObject, CLLocationManagerDelegate{
     static let sharedInstance = Location()
     // makes the class a singleton so we're always looking at the same instance
@@ -19,6 +20,7 @@ class Location: NSObject, CLLocationManagerDelegate{
 	var lastAwayNotificationTime: Double = 0
 	var lastSafeTime: Double = 0
     var status: CLAuthorizationStatus?
+	var wifiWasConnected: Bool = true
     
     // initializer. Checks if logged in and if so gets all the stuff we need
     // private to make sure that the class stays a singleton
@@ -52,6 +54,7 @@ class Location: NSObject, CLLocationManagerDelegate{
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]){
 		let location = locations.last! as CLLocation
 		let content = UNMutableNotificationContent()
+		reachabilityChanged()
 		let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
 		switch shouldSendNewNotification(location: location) {
 			case 1:
@@ -112,4 +115,27 @@ class Location: NSObject, CLLocationManagerDelegate{
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         self.status = status
     }
+	func reachabilityChanged() {
+		let defaults = UserDefaults.standard
+		let reach = Reachability()!
+		if reach.isReachable {
+			if reach.isReachableViaWiFi {
+				if !wifiWasConnected{
+					print("onwifi")
+					wifiWasConnected = true
+					defaults.set("wifi", forKey: "dataDietMethod")
+					SFContentBlockerManager.reloadContentBlocker(withIdentifier: "com.jacklightbody.Smart-Wifi-Toggler.Data-Blocker", completionHandler: nil)
+				}
+			} else {
+				if wifiWasConnected{
+					print("ondata")
+					wifiWasConnected = false
+					defaults.set("data", forKey: "dataDietMethod")
+					SFContentBlockerManager.reloadContentBlocker(withIdentifier: "com.jacklightbody.Smart-Wifi-Toggler.Data-Blocker", completionHandler: nil)
+				}
+ 			}
+		} else {
+			print("Not reachable")
+		}
+	}
 }

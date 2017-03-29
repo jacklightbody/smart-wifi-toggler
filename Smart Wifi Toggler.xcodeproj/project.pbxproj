@@ -12,10 +12,38 @@
 		045629C21E883E8C00BAF949 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045629C01E883E8C00BAF949 /* Main.storyboard */; };
 		045629C41E883E8C00BAF949 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 045629C31E883E8C00BAF949 /* Assets.xcassets */; };
 		045629C71E883E8C00BAF949 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045629C51E883E8C00BAF949 /* LaunchScreen.storyboard */; };
+		048EA31E1E8C2F500004DC97 /* ContentBlockerRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048EA31D1E8C2F500004DC97 /* ContentBlockerRequestHandler.swift */; };
+		048EA3221E8C2F500004DC97 /* Data Blocker.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 048EA3191E8C2F500004DC97 /* Data Blocker.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		048EA3291E8C2F650004DC97 /* datalist.json in Resources */ = {isa = PBXBuildFile; fileRef = 048EA3271E8C2F650004DC97 /* datalist.json */; };
+		048EA32A1E8C2F650004DC97 /* emptylist.json in Resources */ = {isa = PBXBuildFile; fileRef = 048EA3281E8C2F650004DC97 /* emptylist.json */; };
 		04CED4BE1E8845CE00FE5F1F /* PermissionScope.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04CED4BD1E8845CE00FE5F1F /* PermissionScope.framework */; };
 		04CED4C41E8846EB00FE5F1F /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CED4C31E8846EB00FE5F1F /* Location.swift */; };
 		04CED4C61E8848E000FE5F1F /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CED4C51E8848E000FE5F1F /* Reachability.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		048EA3201E8C2F500004DC97 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 045629B11E883E8B00BAF949 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 048EA3181E8C2F500004DC97;
+			remoteInfo = "Data Blocker";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		048EA3261E8C2F500004DC97 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				048EA3221E8C2F500004DC97 /* Data Blocker.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		045629B91E883E8C00BAF949 /* Smart Wifi Toggler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smart Wifi Toggler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -25,6 +53,11 @@
 		045629C31E883E8C00BAF949 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		045629C61E883E8C00BAF949 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		045629C81E883E8C00BAF949 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		048EA3191E8C2F500004DC97 /* Data Blocker.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Data Blocker.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		048EA31D1E8C2F500004DC97 /* ContentBlockerRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentBlockerRequestHandler.swift; sourceTree = "<group>"; };
+		048EA31F1E8C2F500004DC97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		048EA3271E8C2F650004DC97 /* datalist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = datalist.json; sourceTree = "<group>"; };
+		048EA3281E8C2F650004DC97 /* emptylist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = emptylist.json; sourceTree = "<group>"; };
 		04CED4BD1E8845CE00FE5F1F /* PermissionScope.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PermissionScope.framework; path = Carthage/Build/iOS/PermissionScope.framework; sourceTree = "<group>"; };
 		04CED4C31E8846EB00FE5F1F /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		04CED4C51E8848E000FE5F1F /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
@@ -39,6 +72,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		048EA3161E8C2F500004DC97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -46,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				045629BB1E883E8C00BAF949 /* Smart Wifi Toggler */,
+				048EA31A1E8C2F500004DC97 /* Data Blocker */,
 				045629BA1E883E8C00BAF949 /* Products */,
 				04CED4BC1E8845CE00FE5F1F /* Frameworks */,
 			);
@@ -55,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				045629B91E883E8C00BAF949 /* Smart Wifi Toggler.app */,
+				048EA3191E8C2F500004DC97 /* Data Blocker.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -72,6 +114,17 @@
 				045629C81E883E8C00BAF949 /* Info.plist */,
 			);
 			path = "Smart Wifi Toggler";
+			sourceTree = "<group>";
+		};
+		048EA31A1E8C2F500004DC97 /* Data Blocker */ = {
+			isa = PBXGroup;
+			children = (
+				048EA3271E8C2F650004DC97 /* datalist.json */,
+				048EA3281E8C2F650004DC97 /* emptylist.json */,
+				048EA31D1E8C2F500004DC97 /* ContentBlockerRequestHandler.swift */,
+				048EA31F1E8C2F500004DC97 /* Info.plist */,
+			);
+			path = "Data Blocker";
 			sourceTree = "<group>";
 		};
 		04CED4BC1E8845CE00FE5F1F /* Frameworks */ = {
@@ -101,15 +154,34 @@
 				045629B61E883E8B00BAF949 /* Frameworks */,
 				045629B71E883E8B00BAF949 /* Resources */,
 				04CED4C01E8845ED00FE5F1F /* ShellScript */,
+				048EA3261E8C2F500004DC97 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				048EA3211E8C2F500004DC97 /* PBXTargetDependency */,
 			);
 			name = "Smart Wifi Toggler";
 			productName = "Smart Wifi Toggler";
 			productReference = 045629B91E883E8C00BAF949 /* Smart Wifi Toggler.app */;
 			productType = "com.apple.product-type.application";
+		};
+		048EA3181E8C2F500004DC97 /* Data Blocker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 048EA3231E8C2F500004DC97 /* Build configuration list for PBXNativeTarget "Data Blocker" */;
+			buildPhases = (
+				048EA3151E8C2F500004DC97 /* Sources */,
+				048EA3161E8C2F500004DC97 /* Frameworks */,
+				048EA3171E8C2F500004DC97 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Data Blocker";
+			productName = "Data Blocker";
+			productReference = 048EA3191E8C2F500004DC97 /* Data Blocker.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -122,6 +194,11 @@
 				ORGANIZATIONNAME = "Jack lightbody";
 				TargetAttributes = {
 					045629B81E883E8B00BAF949 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 73WHT8U62X;
+						ProvisioningStyle = Automatic;
+					};
+					048EA3181E8C2F500004DC97 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 73WHT8U62X;
 						ProvisioningStyle = Automatic;
@@ -142,6 +219,7 @@
 			projectRoot = "";
 			targets = (
 				045629B81E883E8B00BAF949 /* Smart Wifi Toggler */,
+				048EA3181E8C2F500004DC97 /* Data Blocker */,
 			);
 		};
 /* End PBXProject section */
@@ -154,6 +232,15 @@
 				045629C71E883E8C00BAF949 /* LaunchScreen.storyboard in Resources */,
 				045629C41E883E8C00BAF949 /* Assets.xcassets in Resources */,
 				045629C21E883E8C00BAF949 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		048EA3171E8C2F500004DC97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				048EA32A1E8C2F650004DC97 /* emptylist.json in Resources */,
+				048EA3291E8C2F650004DC97 /* datalist.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,7 +275,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		048EA3151E8C2F500004DC97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				048EA31E1E8C2F500004DC97 /* ContentBlockerRequestHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		048EA3211E8C2F500004DC97 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 048EA3181E8C2F500004DC97 /* Data Blocker */;
+			targetProxy = 048EA3201E8C2F500004DC97 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		045629C01E883E8C00BAF949 /* Main.storyboard */ = {
@@ -306,6 +409,7 @@
 		045629CC1E883E8C00BAF949 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 73WHT8U62X;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -323,6 +427,7 @@
 		045629CD1E883E8C00BAF949 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 73WHT8U62X;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -333,6 +438,34 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jacklightbody.Smart-Wifi-Toggler";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		048EA3241E8C2F500004DC97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				DEVELOPMENT_TEAM = 73WHT8U62X;
+				INFOPLIST_FILE = "Data Blocker/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jacklightbody.Smart-Wifi-Toggler.Data-Blocker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		048EA3251E8C2F500004DC97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				DEVELOPMENT_TEAM = 73WHT8U62X;
+				INFOPLIST_FILE = "Data Blocker/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jacklightbody.Smart-Wifi-Toggler.Data-Blocker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -357,6 +490,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		048EA3231E8C2F500004DC97 /* Build configuration list for PBXNativeTarget "Data Blocker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				048EA3241E8C2F500004DC97 /* Debug */,
+				048EA3251E8C2F500004DC97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

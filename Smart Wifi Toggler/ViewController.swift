@@ -8,6 +8,7 @@
 
 import UIKit
 import PermissionScope
+import SafariServices
 
 class ViewController: UIViewController {
 	let pscope = PermissionScope()
@@ -26,6 +27,7 @@ class ViewController: UIViewController {
 		}, cancelled: { (results) -> Void in
 			print("thing was cancelled")
 		})
+		SFContentBlockerManager.reloadContentBlocker(withIdentifier: "com.jacklightbody.Smart-Wifi-Toggler.Data-Blocker", completionHandler: nil)
 
 	}
 
