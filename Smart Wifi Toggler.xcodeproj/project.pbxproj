@@ -12,6 +12,7 @@
 		045629C21E883E8C00BAF949 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045629C01E883E8C00BAF949 /* Main.storyboard */; };
 		045629C41E883E8C00BAF949 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 045629C31E883E8C00BAF949 /* Assets.xcassets */; };
 		045629C71E883E8C00BAF949 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045629C51E883E8C00BAF949 /* LaunchScreen.storyboard */; };
+		04683A601E9151650037C9CE /* NeedAccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04683A5F1E9151650037C9CE /* NeedAccessView.swift */; };
 		048EA31E1E8C2F500004DC97 /* ContentBlockerRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048EA31D1E8C2F500004DC97 /* ContentBlockerRequestHandler.swift */; };
 		048EA3221E8C2F500004DC97 /* Data Blocker.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 048EA3191E8C2F500004DC97 /* Data Blocker.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		048EA3291E8C2F650004DC97 /* datalist.json in Resources */ = {isa = PBXBuildFile; fileRef = 048EA3271E8C2F650004DC97 /* datalist.json */; };
@@ -53,6 +54,7 @@
 		045629C31E883E8C00BAF949 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		045629C61E883E8C00BAF949 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		045629C81E883E8C00BAF949 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04683A5F1E9151650037C9CE /* NeedAccessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeedAccessView.swift; sourceTree = "<group>"; };
 		048EA3191E8C2F500004DC97 /* Data Blocker.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Data Blocker.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		048EA31D1E8C2F500004DC97 /* ContentBlockerRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentBlockerRequestHandler.swift; sourceTree = "<group>"; };
 		048EA31F1E8C2F500004DC97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				04CED4C31E8846EB00FE5F1F /* Location.swift */,
 				045629BE1E883E8C00BAF949 /* ViewController.swift */,
 				045629C01E883E8C00BAF949 /* Main.storyboard */,
+				04683A5F1E9151650037C9CE /* NeedAccessView.swift */,
 				04CED4C71E8848FF00FE5F1F /* 3rd Party */,
 				045629C31E883E8C00BAF949 /* Assets.xcassets */,
 				045629C51E883E8C00BAF949 /* LaunchScreen.storyboard */,
@@ -268,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04683A601E9151650037C9CE /* NeedAccessView.swift in Sources */,
 				045629BF1E883E8C00BAF949 /* ViewController.swift in Sources */,
 				04CED4C41E8846EB00FE5F1F /* Location.swift in Sources */,
 				04CED4C61E8848E000FE5F1F /* Reachability.swift in Sources */,
@@ -498,6 +502,7 @@
 				048EA3251E8C2F500004DC97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -25,7 +25,8 @@ class ViewController: UIViewController {
 		pscope.show({ finished, results in
 			print("got results \(results)")
 		}, cancelled: { (results) -> Void in
-			print("thing was cancelled")
+			let requestView = NeedAccessView()
+			self.present(requestView, animated: true, completion: nil)
 		})
 		SFContentBlockerManager.reloadContentBlocker(withIdentifier: "com.jacklightbody.Smart-Wifi-Toggler.Data-Blocker", completionHandler: nil)
 
